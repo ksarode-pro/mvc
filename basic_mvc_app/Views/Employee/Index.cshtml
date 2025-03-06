@@ -1,0 +1,65 @@
+@model List<Employee>
+@{
+    ViewData["Title"] = "Employee";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            @if (TempData["success"] != null)
+            {
+                <span class="text text-success">@TempData["success"]</span>
+            }
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Actions
+                </th>
+            </thead>
+            <tbody>
+                @foreach (var emp in Model)
+                {
+                    <tr>
+                        <td>
+                            @emp.Id
+                        </td>
+                        <td>
+                            @{
+                                var FullName = emp.FirstName + " " + @emp.LastName;
+                            }
+                            @FullName
+                        </td>
+                        <td>
+                            @emp.Email
+                        </td>
+                        <td>
+                            <a asp-controller="Employee" asp-action="Details" asp-route-id="@emp.Id"
+                                class="btn btn-primary btn-small">Details</a>
+                            <a asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.Id"
+                                class="btn btn-primary btn-small">Edit</a>
+                            <form asp-controller="Employee" asp-action="Delete" method="POST">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="Id" value="@emp.Id" />
+                                <input type="submit" class="btn btn-danger btn-small" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <a class="btn btn-small btn-primary" asp-controller="Employee" asp-action="Create">Create New Employee</a>
+    </div>
+</div>

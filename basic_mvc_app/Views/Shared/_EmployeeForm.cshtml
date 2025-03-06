@@ -1,0 +1,27 @@
+@model Employee
+
+@Html.AntiForgeryToken()
+<div class="row">
+    <div asp-validation-summary="All" class="text-danger"></div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" placeholder="Enter First Name" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" placeholder="Enter Last Name" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" placeholder="Enter Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+</div>

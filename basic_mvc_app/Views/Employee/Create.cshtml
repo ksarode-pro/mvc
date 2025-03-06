@@ -1,0 +1,26 @@
+@model Employee
+@{
+    ViewData["Title"] = "Create Employee";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="row">
+        <form asp-action="Create" asp-controller="Employee" method="post">
+            <partial name="~/Views/Shared/_EmployeeForm.cshtml"></partial>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="submit" class="btn btn-small btn-success" class="form-control" />
+                    <a class="btn btn-small btn-primary" asp-controller="Employee" asp-action="Index">Employee List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@*
+Defining script section to include partial view at layout
+*@
+@section Scripts {
+    <partial name="~/Views/Shared/_ValidationScriptsPartial.cshtml" />
+}
