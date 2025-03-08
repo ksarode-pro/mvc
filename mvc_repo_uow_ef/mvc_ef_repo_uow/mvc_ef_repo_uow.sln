@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_ef_repo_uow", "mvc_ef_repo_uow\mvc_ef_repo_uow.csproj", "{516E4568-1AC8-483C-8E62-0DE19C46A453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{297E7BAF-92CE-4EDE-8E94-5773BBE2F0BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{516E4568-1AC8-483C-8E62-0DE19C46A453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516E4568-1AC8-483C-8E62-0DE19C46A453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516E4568-1AC8-483C-8E62-0DE19C46A453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516E4568-1AC8-483C-8E62-0DE19C46A453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{297E7BAF-92CE-4EDE-8E94-5773BBE2F0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297E7BAF-92CE-4EDE-8E94-5773BBE2F0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297E7BAF-92CE-4EDE-8E94-5773BBE2F0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297E7BAF-92CE-4EDE-8E94-5773BBE2F0BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F15983C-0D2D-42AA-B681-A8B847620D02}
+	EndGlobalSection
+EndGlobal
